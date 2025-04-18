@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SL Vehi Mart - Add Vehicle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-image: url(back.jpeg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .add-vehicle-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 600px;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #f7c200;
+    }
+
+    .add-vehicle-container input,
+    .add-vehicle-container select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #fff;
+    }
+
+    .add-vehicle-container input[type="submit"] {
+      background-color: #f7c200;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-vehicle-container input[type="submit"]:hover {
+      background-color: #ffdd00;
+    }
+
+    .add-vehicle-container p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .add-vehicle-container a {
+      color: #f7c200;
+      text-decoration: none;
+    }
+
+    .add-vehicle-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="add-vehicle-container">
+    <h2>Add Vehicle Details</h2>
+    <form action="#" method="POST">
+      <input type="text" name="vehicle_name" placeholder="Vehicle Name" required />
+      <input type="text" name="vehicle_model" placeholder="Vehicle Model" required />
+      <input type="number" name="vehicle_price" placeholder="Vehicle Price" required />
+      <select name="vehicle_category" required>
+        <option value="">Select Category</option>
+        <option value="Car">Car</option>
+        <option value="Truck">Truck</option>
+        <option value="SUV">SUV</option>
+        <option value="Van">Van</option>
+      </select>
+      <input type="number" name="vehicle_year" placeholder="Vehicle Year" required />
+      <input type="submit" value="Add Vehicle" />
+    </form>
+    <p>Want to go back? <a href="dashboard.html">Go to Dashboard</a></p>
+  </div>
+</body>
+</html>

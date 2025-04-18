@@ -1,0 +1,125 @@
+
+p{
+  background-color: red;
+}
+.animated-heading {
+  animation: slideFadeIn 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bubbles span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(000, 000, 255, 0.15);
+
+  bottom: -50px;
+  border-radius: 50%;
+  animation: rise 20s linear infinite;
+  left: calc(100% * var(--i) / 25);
+  animation-duration: calc(3s + var(--i) * 0.5s);
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+.cube-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So it doesn’t block any clicks */
+  z-index: -1;
+  overflow: hidden;
+}
+
+.cube {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(145deg, #3498db, #1abc9c);
+  position: absolute;
+  border-radius: 4px;
+  transform: rotateX(45deg) rotateY(45deg);
+  animation: floatBox 12s linear infinite alternate;
+}
+
+@keyframes floatBox {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(45deg) rotateY(45deg);
+  }
+  25% {
+    transform: translate3d(70vw, 10vh, 0) rotateX(90deg) rotateY(0deg);
+  }
+  50% {
+    transform: translate3d(30vw, 60vh, 0) rotateX(0deg) rotateY(180deg);
+  }
+  75% {
+    transform: translate3d(80vw, 90vh, 0) rotateX(180deg) rotateY(90deg);
+  }
+  100% {
+    transform: translate3d(0vw, 0vh, 0) rotateX(360deg) rotateY(360deg);
+  }
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #e38282; /* dark background for contrast */
+}
+
+.ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, #ff5f6d, #ffc371);
+  border-radius: 50%;
+  animation: bounceBall 5s infinite linear;
+}
+
+@keyframes bounceBall {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(80vw, 10vh);
+  }
+  40% {
+    transform: translate(60vw, 80vh);
+  }
+  60% {
+    transform: translate(10vw, 70vh);
+  }
+  80% {
+    transform: translate(20vw, 20vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

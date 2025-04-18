@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SL Vehi Mart - Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-image: url(back.jpeg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .dashboard-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 800px;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #f7c200;
+    }
+
+    .category {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .category span {
+      font-weight: bold;
+    }
+
+    .category button {
+      padding: 10px 15px;
+      background-color: #f7c200;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .category button:hover {
+      background-color: #ffdd00;
+    }
+
+    .logout {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #f7c200;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .logout:hover {
+      background-color: #ffdd00;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h2>Welcome to SL Vehi Mart</h2>
+
+    <div class="category">
+      <span>Cars</span>
+      <span>$25,000 - $50,000</span>
+      <button>View Details</button>
+    </div>
+
+    <div class="category">
+      <span>Trucks</span>
+      <span>$30,000 - $60,000</span>
+      <button>View Details</button>
+    </div>
+
+    <div class="category">
+      <span>SUVs</span>
+      <span>$35,000 - $65,000</span>
+      <button>View Details</button>
+    </div>
+
+    <div class="category">
+      <span>Vans</span>
+      <span>$28,000 - $55,000</span>
+      <button>View Details</button>
+    </div>
+    <a href="third.html">
+      style
+  <button style="padding: 10px 20px; background-color: #f7c200; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+    Add New Vehicle
+  </button>
+</a>
+
+
+    <a href="login.html" class="logout">Logout</a>
+  </div>
+</body>
+</html>
+
